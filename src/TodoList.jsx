@@ -1,5 +1,5 @@
 import React from 'react'
-import List from './List'
+import ListItem from './ListItem'
 
 // stateless component
 const TodoList = (props) => {
@@ -7,9 +7,9 @@ const TodoList = (props) => {
     <div className="todo-list">
       <ul>
         {
-          props.todos.map((item) => {
+          props.todos.map((item, index) => {
             return (
-              <List item={item}/>
+              <ListItem item={item} index={index}/>
             )
           }
         )
