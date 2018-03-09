@@ -1,21 +1,22 @@
 import React from 'react'
+import List from './List'
 
-class TodoList extends React.Component{
-  render(){
-    return(
-      <div className='todo-list'>
-        <ul>
-          {
-            this.props.todos.map((item) => {
-              return (
-                <li key={item}>{item}</li>
-              )
-            })
+// stateless component
+const TodoList = (props) => {
+  return(
+    <div className="todo-list">
+      <ul>
+        {
+          props.todos.map((item) => {
+            return (
+              <List item={item}/>
+            )
           }
-        </ul>
-      </div>
-    )
-  }
+        )
+      }
+    </ul>
+  </div>
+)
 }
 
 export default TodoList
