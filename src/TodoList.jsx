@@ -9,7 +9,7 @@ const TodoList = (props) => {
         {
           props.todos.map((item, index) => {
             return (
-              <ListItem item={item} index={index}/>
+              <ListItem item={item} key={index}/>
             )
           }
         )

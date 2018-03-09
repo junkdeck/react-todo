@@ -1,6 +1,8 @@
+import React from 'react'
+
 const ListItem = ({item, index}) => {
   return(
-    <li key={index}>{item}</li>
+    <li>{item}</li>
   )
 }
 
