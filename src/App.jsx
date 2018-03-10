@@ -22,12 +22,20 @@ class App extends Component{
 
   inputSubmit = (e) => {
     e.preventDefault()
-    console.log(this.state.inputValue)
-    // reset input field
+    let todoArray = this.state.todos
+    todoArray.push(this.state.inputValue)
+    // reset input field & add new todo to state array
     this.setState({
-      todos: [...this.state.todos, this.state.inputValue],
+      todos: todoArray,
       inputValue: ''
     })
+  }
+
+  todoRemove = (item) => (e) => {
+    let todoArray = this.state.todos
+    let indexToRemove = todoArray.indexOf(item)
+    todoArray.splice(indexToRemove,1)
+    this.setState({todos: todoArray});
   }
 
   render(){
@@ -37,7 +45,7 @@ class App extends Component{
         <div className="content flex-center">
           <div className="todo-container">
             <Input onChange={this.inputChange} onSubmit={this.inputSubmit} inputValue={this.state.inputValue}/>
-            <TodoList todos={this.state.todos} />
+            <TodoList todos={this.state.todos} onClick={this.todoRemove} />
           </div>
         </div>
       </div>
