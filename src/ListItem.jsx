@@ -2,7 +2,7 @@ import React from 'react'
 
 const ListItem = (props) => {
   return(
-    <li onClick={props.onClick}>{props.item}</li>
+    <li>{props.item}</li>
   )
 }
 

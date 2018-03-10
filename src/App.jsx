@@ -31,9 +31,9 @@ class App extends Component{
     })
   }
 
-  todoRemove = (item) => (e) => {
+  todoRemove = (e) => {
     let todoArray = this.state.todos
-    let indexToRemove = todoArray.indexOf(item)
+    let indexToRemove = todoArray.indexOf(e.target.innerHTML)
     todoArray.splice(indexToRemove,1)
     this.setState({todos: todoArray});
   }

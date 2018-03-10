@@ -6,13 +6,11 @@ const TodoList = (props) => {
 
   return(
     <div className="todo-list">
-      <ul>
+      <ul onClick={props.onClick}>
         {
           props.todos.map((item) => {
-            // bind the components onClick function to attach 'item' argument
-            // let boundClick = props.onClick.bind(this, item)
             return (
-              <ListItem item={item.toString()} key={item} onClick={props.onClick(item)}/>
+              <ListItem item={item.toString()} key={item}/>
             )
           }
         )
