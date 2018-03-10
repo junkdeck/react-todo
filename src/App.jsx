@@ -43,7 +43,7 @@ class App extends Component{
       <div className='wrapper'>
         <Header isLoggedIn={true} name="fred"/>
         <div className="content flex-center">
-          <div className="todo-container">
+          <div className="todo-container flex-center">
             <Input onChange={this.inputChange} onSubmit={this.inputSubmit} inputValue={this.state.inputValue}/>
             <TodoList todos={this.state.todos} onClick={this.todoRemove} />
           </div>
