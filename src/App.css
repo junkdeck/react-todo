@@ -61,8 +61,18 @@ html,body{
 	height: 75%;
 
 	background: #e8e8e8;
-	border: 1px solid #d4d4d4;
+	border: 1px solid #dadada;
 	border-radius: 5px;
+
+	box-shadow: 1px 1px #dadada,
+							2px 2px #dadada,
+							3px 3px #dadada,
+							4px 4px #dadada,
+							6px 6px #dadada,
+							7px 7px #dadada,
+							8px 8px #dadada,
+							9px 9px #dadada,
+							10px 10px #dadada;
 }
 
 .todo-input-div{
@@ -93,6 +103,8 @@ html,body{
 .todo-list li{
 	padding: 5px;
 	list-style: none;
+
+	color: #333;
 }
 
 .todo-list li:nth-child(odd){
